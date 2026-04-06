@@ -1,5 +1,4 @@
 import os
-import time
 
 
 def format_time(seconds):
@@ -38,14 +37,14 @@ def ft_tqdm(lst: range):
     progressbar every time a value is requested.
     '''
     total = len(lst)
-    start_time = time.time()
+    start_time = os.times()[4]
 
     for i, item in enumerate(lst):
         current = i + 1
         percentage = (current / total) * 100
 
         # Calculate times and speed
-        elapsed_time = time.time() - start_time
+        elapsed_time = os.times()[4] - start_time
         if elapsed_time > 0:
             it_per_sec = current / elapsed_time
         else:
