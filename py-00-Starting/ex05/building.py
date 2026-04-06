@@ -4,7 +4,7 @@ import sys
 def main():
     """Counts character types in a string."""
     argv = sys.argv[1:]
-    assert len(argv) <= 1, "more than one argument is provided"
+    assert len(argv) <= 1, "more than one argument are provided"
     if len(argv) == 1:
         text = argv[0]
     else:
