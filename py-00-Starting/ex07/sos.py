@@ -1,17 +1,20 @@
 import sys
 
+
 def main():
     """Convert a command-line string argument to Morse code and print it.
 
-    Expects exactly one argument containing only alphanumeric characters and spaces.
-    Each character is looked up in NESTED_MORSE and the results are joined with spaces.
-    Raises AssertionError if the argument count or content is invalid.
+    Expects exactly one argument containing only alphanumeric characters
+    and spaces. Each character is looked up in NESTED_MORSE and the results
+    are joined with spaces. Raises AssertionError if the argument count or
+    content is invalid.
     """
     try:
         argv = sys.argv[1:]
-        assert len(argv) == 1 , "the arguments are bad"
-        assert all(c.isalnum() or c.isspace() for c in argv[0]), "the arguments are bad"
-        
+        assert len(argv) == 1, "the arguments are bad"
+        assert all(c.isalnum() or c.isspace() for c in argv[0]), \
+            "the arguments are bad"
+
         NESTED_MORSE = {
             ' ': '/', 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..',
             'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..',
@@ -29,6 +32,7 @@ def main():
         print(' '.join(text))
     except AssertionError as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()
