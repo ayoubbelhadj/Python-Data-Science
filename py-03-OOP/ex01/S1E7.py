@@ -33,7 +33,7 @@ class Lannister(Character):
         self.hairs = "light"
 
     def die(self):
-        """Your docstring for Method"""
+        """Mark the character as dead."""
         self.is_alive = False
 
     def __str__(self):
