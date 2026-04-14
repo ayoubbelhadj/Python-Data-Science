@@ -11,7 +11,7 @@ class Baratheon(Character):
         self.hairs = "dark"
 
     def die(self):
-        """Your docstring for Method"""
+        """Mark the character as dead."""
         self.is_alive = False
 
     def __str__(self):
